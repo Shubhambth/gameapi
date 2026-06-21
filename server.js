@@ -9,15 +9,15 @@ const app = express()
 
 app.use(express.json())
 
-connectDB()
-
-
-app.use("/api/v1/auth",authRouts)
+app.use("/api/v1/auth", authRouts)
 
 app.get("/test",(req,res)=>{
     res.json({
-        "message" : "working"
+        message:"working"
     })
 })
 
-export default app;
+
+connectDB()
+
+export default app

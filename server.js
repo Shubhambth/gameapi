@@ -14,4 +14,10 @@ connectDB()
 
 app.use("/api/v1/auth",authRouts)
 
+app.get("/test",(req,res)=>{
+    res.json({
+        "message" : "working"
+    })
+})
+
 export default app;
